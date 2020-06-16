@@ -38,6 +38,7 @@ a:focus {
 
 h1 {
     font-family: 'Helvetica Neue',Arial,sans-serif;
+	    font-size: 16px;
 }
 h2 {
     font-family: 'Helvetica Neue',Arial,sans-serif;
@@ -488,7 +489,28 @@ body {
 }
 
 /* THIS IS MY ATTEMPT AT BUILDING A GALLERY TO CLICK THROUGH THE IMAGES */
-boximg {
-	width: 200px;
-	background-color:red;
+.galimg {
+	width: 100%;
+    text-align: center;
+	font-size: 100px;
+	color: #C35817;
+}
+img {
+	max-width:100%;
+	max-height:100%
+}
+#galheader { 
+	width:95%;
+	height:80px;
+	padding:2%;
+	}
+/* I got the same effect below with "class" as I did "id" */
+#alprev {
+    padding-top:250px;
+	float: left;
+}
+/* Bizarly (or perhaps completely fucking predictibly) the padding on galnext works but it doesn't on galprev */
+#galnext {
+    padding-top:250px;
+	float: right;
 }
