@@ -499,18 +499,21 @@ img {
 	max-width:100%;
 	max-height:100%
 }
-#galheader { 
-	width:95%;
-	height:80px;
-	padding:2%;
-	}
-/* I got the same effect below with "class" as I did "id" */
-#alprev {
-    padding-top:250px;
-	float: left;
+#galheader {
+	display:block;
+}
+.galprev {
+	width:30%; 
+	min-height:200px; 
+	margin-right:2%; 
+	float:left; 
+	display:inline; 
+	background:black;
 }
 /* Bizarly (or perhaps completely fucking predictibly) the padding on galnext works but it doesn't on galprev */
-#galnext {
+.galnext {
     padding-top:250px;
 	float: right;
 }
+.galimg {
+	
