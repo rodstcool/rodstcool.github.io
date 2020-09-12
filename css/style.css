@@ -122,7 +122,7 @@ h6,
 
 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
 	margin: 0 0 10px;
 }
@@ -139,12 +139,12 @@ p {
 /* the A in rgba stands for Alpha and is an attribute of opacity. */
 .text-faded {
     color: rgba(255,255,255,.7);
+	font-size: 18px;
 }
 
 .no-padding {
     padding: 0;
 }
-
 
 .navbar {
 	position: relative;
@@ -419,11 +419,24 @@ header .header-content {
         font-size: 18px;
     }
 }
-/* the main difference between small and large is the background image's scaling. On small screen it fits the image 100% width and scales it. 
-On large screens it fills the height 100% and crops the image */
+/* the main difference between small and large is the background image's scaling. On small screen it fits the image 100% width and scales it. On large screens it fills the height 100% and crops the image */
 
 section {
 	padding: 100px 0;
+}
+
+.section-heading {
+    margin-top: 0;
+}
+
+/* a lot of the next two definitions are defunct, but as of 27.07.2020 I'm not too concerned at deleting them */
+.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after, .dl-horizontal dd:after, .container:after, .container-fluid:after, .form-horizontal .form-group:after, .btn-toolbar:after, .btn-group-vertical > .btn-group:after, .nav:after, .navbar:after, .navbar-header:after, .navbar-collapse:after, .pager:after, .panel-body:after, .modal-header:after, .modal-footer:after {
+    clear: both;
 }
 
 .btn {
@@ -463,8 +476,6 @@ section {
 }
 
 .container {
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -489,49 +500,22 @@ section {
 }
 
 .container-fluid {
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-}
-
-.section-heading {
-    margin-top: 0;
 }
 
 .bg-primary {
     color: #fff;
 }
 
-/* within the SECTION there is a class="row" controling the text */
-
-
-/* service boxes are the vertical columns containing the thumbnails in the portfolio */
-.service-box {
-    margin: 50px auto 0;
-    max-width: 400px;
-}
-
-@media(min-width:992px) {
-    .service-box {
-        margin: 20px auto 0;
-    }
-}
-
-.service-box p {
-    margin-bottom: 0;
-}
-
-/* PORTFOLIO BOXES ARE THE MENU BUTTONS TO THE VARIOUS PORTFOLIOS */
-.portfolio-box {
+/* index boxes are the menu buttons to the various portfolios on the INDEX page */
+.index-box {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 650px;
-    max-height: 460px;
 }
 
-.portfolio-box .portfolio-box-caption {
+.index-box .index-box-caption {
     display: block;
     position: absolute;
     bottom: 0;
@@ -546,7 +530,7 @@ section {
     transition: all .35s;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+.index-box .index-box-caption .index-box-caption-content {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -554,99 +538,102 @@ section {
     transform: translateY(-50%);
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.index-box .index-box-caption .index-box-caption-content .project-category,
+.index-box .index-box-caption .index-box-caption-content .project-name {
     padding: 0 15px;
     font-family: 'Helvetica Neue',Arial,sans-serif;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+.index-box .index-box-caption .index-box-caption-content .project-category {
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
 }
 
-.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+.index-box .index-box-caption .index-box-caption-content .project-name {
     font-size: 18px;
 }
 
-.portfolio-box:hover .portfolio-box-caption {
+.index-box:hover .index-box-caption {
     opacity: 1;
 }
 
 @media(min-width:768px) {
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    .index-box .index-box-caption .index-box-caption-content .project-category {
         font-size: 26px;
     }
 
-    .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    .index-box .index-box-caption .index-box-caption-content .project-name {
         font-size: 22px;
     }
 }
 
-/* a lot of the next two definitions are defunct, but as of 27.07.2020 I'm not too concerned at deleting them */
-.clearfix:before, .clearfix:after, .dl-horizontal dd:before, .dl-horizontal dd:after, .container:before, .container:after, .container-fluid:before, .container-fluid:after, .row:before, .row:after, .form-horizontal .form-group:before, .form-horizontal .form-group:after, .btn-toolbar:before, .btn-toolbar:after, .btn-group-vertical > .btn-group:before, .btn-group-vertical > .btn-group:after, .nav:before, .nav:after, .navbar:before, .navbar:after, .navbar-header:before, .navbar-header:after, .navbar-collapse:before, .navbar-collapse:after, .pager:before, .pager:after, .panel-body:before, .panel-body:after, .modal-header:before, .modal-header:after, .modal-footer:before, .modal-footer:after {
-    display: table;
-    content: " ";
+/* portfolio boxes help space the thumbnails on the PORTFOLIO pages */
+.portfolio-box {
+    display: block;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
-.clearfix:after, .dl-horizontal dd:after, .container:after, .container-fluid:after, .row:after, .form-horizontal .form-group:after, .btn-toolbar:after, .btn-group-vertical > .btn-group:after, .nav:after, .navbar:after, .navbar-header:after, .navbar-collapse:after, .pager:after, .panel-body:after, .modal-header:after, .modal-footer:after {
-    clear: both;
+.portfolio {
+	line-height: 1;
 }
 
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-@media (min-width: 768px) {
-.col-sm-1 {
-    width: 50%;
-}
-
-.col-sm-2 {
+.col-3 {
+    float: left;
+    position: relative;
+    min-height: 1px;
 	width: 100%;
 }
 
-.col-sm-1, .col-sm-2 {
-    float: left;
-}
+@media (min-width: 768px) {
+	.col-3 {
+		width: 50%;
+	}
+	.col-5 {
+    width: 50%;
+	}
+
+	.col-6 {
+		width: 100%;
+	}
+
+	.col-5, .col-6 {
+		float: left;
+	}
 }
 
 @media (min-width: 992px) {
-.col-md-1 {
-    width: 50%;
-	float: left;
-}
+	.col-3 {
+		width: 33.33333333%;
+	}
 }
 
 @media (min-width: 1200px) {
-.col-lg-1 {
-    width: 66.66666667%;
+	.col-1 {
+		width: 66.66666667%;
+	}
+
+	.col-2, .col-5, .col-6 {
+		width: 33.33333333%;
+	}
+
+	.col-1, .col-2 {
+		float: left;
+	}
+
+	.col-1 {
+		margin-left: 16.66666667%;
+	}
+		
+	.col-3 {
+		width: 25%;
+	}
 }
 
-.col-lg-2 {
-    width: 33.33333333%;
-}
-
-.col-lg-3 {
-	width: 25%;
-}
-
-.col-lg-1, .col-lg-2, .col-lg-3 {
-    float: left;
-}
-
-.col-lg-offset-1 {
-    margin-left: 16.66666667%;
-}
-}
-
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-sm-1, .col-sm-2 {
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6 {
     position: relative;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .call-to-action h2 {
@@ -698,24 +685,32 @@ img::-moz-selection {
     background: 0 0;
 }
 
-
+/* I've only seen a call for img-responsive from the below. The others probably do apply elsewhere (for example I think carousels are how you scroll through a gallery of images) */
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 
 /* this is my attempt at building a GALLERY to click through the images */
 .galimg {
 	width: 100%;
     text-align: center;
 	font-size: 100px;
-	color: #C35817;
+	color: #333;
+	line-height: 1;
 }
+
 img {
-	max-width:100%;
-	max-height:100%;
+	max-width:70%;
 	vertical-align: middle;
 	border: 0;
 }
+
 #galheader {
 	display:block;
 }
+
 .galprev {
 	width:30%; 
 	min-height:200px; 
@@ -724,10 +719,12 @@ img {
 	display:inline; 
 	background:black;
 }
+
 /* Bizarly (or perhaps completely fucking predictibly) the padding on galnext works but it doesn't on galprev */
 .galnext {
     padding-top:250px;
 	float: right;
 }
+
 .galimg {
 }
