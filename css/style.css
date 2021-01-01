@@ -430,7 +430,7 @@ header .header-content {
 /* the main difference between small and large is the background image's scaling. On small screen it fits the image 100% width and scales it. On large screens it fills the height 100% and crops the image */
 
 section {
-	padding: 100px 0;
+	padding: 100px 50px;
 }
 
 .section-heading {
